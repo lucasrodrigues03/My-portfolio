@@ -37,8 +37,8 @@ img {
   --title-font-size: 1.875rem;
   --subtitle-font-size: 1rem;
 
-  --title-font: 'Poppins', sans-serif;
-  --body-font: 'DM Sans', sans-serif;
+  --title-font: "Poppins", sans-serif;
+  --body-font: "DM Sans", sans-serif;
 }
 
 /*===  BASE ============================ */
@@ -98,13 +98,6 @@ body {
 .container {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-}
-.avatar {
-  width: 50%;
-  box-shadow: 20px 20px 20px;
-  bottom: 10%;
-  left: 25%;
-  
 }
 
 .grid {
@@ -172,6 +165,12 @@ nav {
   width: 100%;
 }
 
+nav img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
 nav ul li {
   text-align: center;
 }
@@ -187,7 +186,7 @@ nav ul li a.active {
 }
 
 nav ul li a::after {
-  content: '';
+  content: "";
   width: 0%;
   height: 2px;
   background: var(--base-color);
@@ -266,6 +265,7 @@ nav.show div.icon-close {
 }
 
 /*====  HOME ============================ */
+
 #home {
   overflow: hidden;
 }
@@ -274,9 +274,13 @@ nav.show div.icon-close {
   margin: 0;
 }
 
-#home .image img {
+#home .image .avatar {
+  width: 100%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -6%);
   position: relative;
-  right: 2.93rem;
+  box-shadow: 1px 20px 70px black;
 }
 
 #home .image img,
@@ -296,6 +300,34 @@ nav.show div.icon-close {
 
 #home .text p {
   margin-bottom: 2rem;
+}
+
+/* /*==== ANIMATION  ===========================/* */
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+
+#container {
+  position: absolute;
+  margin-top: 150%;
+  width: 100vw;
+  /* height: 80pt; */
+  top: 60%;
+  color: var(--base-color);
+  filter: url(#threshold) blur(0.6px);
+}
+
+#text1,
+#text2 {
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+
+  text-align: center;
+
+  user-select: none;
 }
 
 /*====  ABOUT ============================ */
@@ -339,11 +371,10 @@ nav.show div.icon-close {
   border-radius: 0.25rem 0.25rem 0 0;
   text-align: center;
   transition: filter 0.2s;
-
 }
 
 .card:hover {
-  filter: brightness(0.9)
+  filter: brightness(0.9);
 }
 
 /*====  TESTIMONIALS ============================ */
@@ -541,6 +572,11 @@ footer .social a:hover {
     top: 0;
   }
 
+  nav img {
+    width: 60px;
+    gap: 1rem;
+  }
+
   nav .menu ul {
     display: flex;
     gap: 2rem;
@@ -564,13 +600,33 @@ footer .social a:hover {
   main {
     margin-top: var(--header-height);
   }
+  /* Animation */
 
-  .avatar {
-    width: 100%;
-    bottom: 15%;
-    left: 10%;
+  @import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+
+  #container {
+    position: absolute;
+    margin-top: 15%;
+    width: 100vw;
+    /* height: 80pt; */
+    top: 60%;
+    color: var(--base-color);
+    filter: url(#threshold) blur(0.6px);
   }
 
+  #text1,
+  #text2 {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+
+    font-family: "Raleway", sans-serif;
+    font-size: 80pt;
+
+    text-align: center;
+
+    user-select: none;
+  }
 
   /* home */
   #home .container {
@@ -581,6 +637,12 @@ footer .social a:hover {
 
   #home .image {
     order: 1;
+  }
+
+  #home .image .avatar {
+    border-radius: 50%;
+    width: 70%;
+    left: 70%;
   }
 
   #home .text {

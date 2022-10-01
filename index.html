@@ -4,7 +4,8 @@
     <!-- PAGE INFO -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meu portifólio</title>
+    <link rel="icon" type="image/x-icon" href="/assets/Images/hacker.png" />
+    <title>Portifólio Lucas Rodrigues</title>
 
     <!-- Icones -->
     <link rel="stylesheet" href="assets/fonts/style.css" />
@@ -28,7 +29,12 @@
   <body>
     <header id="header">
       <nav class="container">
-        <a class="logo" href="#">Desenvolvedor<span>Front end</span>.</a>
+        <a
+          href="https://www.linkedin.com/in/lucas-rodrigues-988758208/"
+          target="_blank"
+          ><img src="./assets/Images/avatar.png" alt=""
+        /></a>
+        <a class="logo" href="#">Dev<span>Front end</span>.</a>
         <!-- menu -->
         <div class="menu">
           <ul class="grid">
@@ -39,6 +45,7 @@
             <li><a class="title" href="#contact">Contato</a></li>
           </ul>
         </div>
+
         <!-- /menu -->
         <div class="toggle icon-menu"></div>
         <div class="toggle icon-close"></div>
@@ -50,8 +57,9 @@
       <section class="section" id="home">
         <div class="container grid">
           <div class="image">
-            <img class="avatar" src="assets/Images/Avatar.jpg" alt="" />
+            <img class="avatar" src="assets/Images/avatar.png" alt="" />
           </div>
+
           <div class="text">
             <h2 class="title">Sobre mim</h2>
             <p>
@@ -69,6 +77,26 @@
               >Agendar uma Call</a
             >
           </div>
+        </div>
+        <div id="container">
+          <span id="text1"></span>
+          <span id="text2"></span>
+        </div>
+        <div class="animation">
+          <svg id="filters">
+            <defs>
+              <filter id="threshold">
+                <feColorMatrix
+                  in="SourceGraphic"
+                  type="matrix"
+                  values="1 0 0 0 0
+                        0 1 0 0 0
+                        0 0 1 0 0
+                        0 0 0 255 -140"
+                />
+              </filter>
+            </defs>
+          </svg>
         </div>
       </section>
 
