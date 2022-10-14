@@ -450,9 +450,14 @@ footer.section {
   padding: 4rem 0;
 }
 
+
 footer .logo {
   display: inline-block;
   margin-bottom: 1.5rem;
+}
+
+footer .brand a span {
+  color: #fff;
 }
 
 footer .brand p {
